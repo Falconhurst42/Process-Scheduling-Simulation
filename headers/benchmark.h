@@ -46,6 +46,9 @@ namespace Simulation {
         return stats;
     }
 
+    // Runs simulations for the given Systemsettings with a different number of CPUs
+    // the results are printed and exported to the data folder specified by "name"
+    // NOTE: CPU count varies logarithmically, not linearly
     void testCPURange(SystemSettings sett, std::string name, CPUID max = 10, CPUID min = 1) {
         auto setts = cpuRange(sett);
         ManyStats stats = simulateRun(setts.begin(), setts.end(), name);

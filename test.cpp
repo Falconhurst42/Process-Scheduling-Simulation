@@ -11,7 +11,7 @@ int main() {
 
     SystemSettings sett;// = SystemSettings::fcfs();
     sett.PROCESS_COUNT = 50;
-    sett.RR_TIME = MAX_CPU_BURST + 1;
+    sett.RR_TIME = 10;
     std::vector<SystemSettings> setts = cpuRange(sett);
     /*sett.CPU_COUNT = 4;
     sett.RR_TIME = MAX_CPU_BURST + 1;
@@ -24,6 +24,6 @@ int main() {
     sett.PROCESS_COUNT = 50;
     sett.CPU_COUNT = 4;
     setts.push_back(sett);*/
-    simulateRun(setts.begin(), setts.end(), "RR_201").exportStats();
+    simulateRun(setts.begin(), setts.end(), "RR_10").exportStats();
     //simulate(sett).printStats();
 }
